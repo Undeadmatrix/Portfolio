@@ -2,3 +2,8 @@
     width: 50%;
     height: auto;
 }
+#resumeButton {
+    text-align: center;
+    margin-top: 47px;
+    margin-left: 94px;
+}
