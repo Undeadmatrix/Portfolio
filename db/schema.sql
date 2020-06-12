@@ -26,7 +26,7 @@ CREATE TABLE IF NOT EXISTS `posts` (
     `body` TEXT NOT NULL,
     `createdAt` DATETIME NOT NULL,
     `updatedAt` DATETIME NOT NULL,
-    `AuthorId` INTEGER, 
+    `userId` INTEGER, 
     PRIMARY KEY (`id`),
-    FOREIGN KEY (`AuthorId`) REFERENCES `Authors` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
+    FOREIGN KEY (`userId`) REFERENCES `users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
 );
