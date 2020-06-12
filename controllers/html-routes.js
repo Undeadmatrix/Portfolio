@@ -35,7 +35,10 @@ module.exports = function(app) {
   // If a user who is not logged in tries to access this route they will be redirected to the signup page
 
    app.get("/members", function(req, res) {
-    res.sendFile(path.join(__dirname, "../public/members.html"));
+     if (req.user) {
+      res.sendFile(path.join(__dirname, "../public/membersLoggedIn.html"));
+     }
+    res.sendFile(path.join(__dirname, "../public/membersView.html"));
   });
 
   app.get("/posts", isAuthenticated, function(req, res) {
